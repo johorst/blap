@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="blwett">
+<head>
+<meta charset="utf-8" />
+<title>blap welcome</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.0-beta.5/angular.min.js"></script>
+<script src="ape.js"></script>   
+</head>
+
+<body ng-controller="blwettCtrl">
+<script>
+var identg = [];
+for (i = 0; i < t.length; i++){
+	identg[i] = "#" + t[i].team1 + t[i].team2
+	   }
+</script>
+Hi $kto.username <br>
+Dein Kontostand: $kto.saldo <br>
+
+Die nächsten Begegnungen:
+<div ng-repeat="x in begegnungen"> 
+	<h1>{{x.team1}} gg. {{x.team2}}</h1>
+	<form id={{x.team1}}{{x.team2}}>
+	<input type="number" id={{x.team1}}{{x.team2}}betrag max=40 min=0/>
+	<input type="radio" name={{x.team1}}{{x.team2}} id={{x.quote1}}>{{x.team1}} {{x.quote1}}</input>
+	<input type="radio" name={{x.team1}}{{x.team2}} id={{x.quote0}}>remis {{x.quote0}}</input>
+	<input type="radio" name={{x.team1}}{{x.team2}} id={{x.quote2}}>{{x.team2}} {{x.quote2}}</input>
+	<button>setzen</button>
+	</form>
+</div>
+<br>
+
+
+<button>Knopf</button>
+
+<script>
+$("button").on('click', function (e) {
+$("button").on('click', function (e) {
+	var sum = 0;
+   for (i = 0 ; i < identg.length; i++){
+	   for (j = 1 ; j < 4; j++){
+    sum += $(identg[i])[0][j].checked * $(identg[i])[0][j].id * $(identg[i])[0][0].value;}}
+    alert(sum);
+   e.preventDefault();
+});
+});
+</script>
+
+</body>
+
+</html>
