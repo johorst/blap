@@ -10,9 +10,9 @@ DataStore.prime('stagefixtures', $.extend({ stageId: 13872, isAggregate: false  
 ,[1090974,4,'Sunday, Jan 29 2017','14:30',50,'Freiburg',0,47,'Hertha Berlin',0,'vs',,0,0,,'-1',0,1,0,0]
 ,[1090964,4,'Sunday, Jan 29 2017','16:30',219,'Mainz 05',0,44,'Borussia Dortmund',0,'vs',,0,0,,'-1',0,1,0,0]
 ]);
-
 //i.e. alles von "DataStore.prime('stagefixtures'" bis "]);"
 
+ODER: https://www.whoscored.com/tournamentsfeed/13872/Fixtures/?d=2017W8&isAggregate=false (BAMM!)
 
 [[1090961,4,'Friday, Jan 27 2017','19:30',39,'Schalke 04',0,45,'Eintracht Frankfurt',0,'vs',,0,0,,'-1',0,1,0,0]
 ,[1090976,4,'Saturday, Jan 28 2017','14:30',7614,'RasenBallsport Leipzig',0,1211,'Hoffenheim',0,'vs',,0,0,,'-1',0,1,0,0]
@@ -27,4 +27,4 @@ DataStore.prime('stagefixtures', $.extend({ stageId: 13872, isAggregate: false  
 
 url https://www.whoscored.com/Matches/1090976/Betting/
 //table mit Überschrift: "Bookmaker 	1 	X 	2 	Payout"
-verschiedene "span" Objekte, deren text ich noch nicht extrahieren konnte.
+verschiedene "span" Objekte, deren text ich noch nicht extrahieren konnte. (Problem: Cookies)
