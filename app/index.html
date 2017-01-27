@@ -6,51 +6,50 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.0-beta.5/angular.min.js"></script>
 <script src="ape.js"></script>   
-<script src="sendData.js"></script>   
+<script src="sendData.js"></script>
+<script src="get.js"></script>
+<script src="promise.js"></script>
 <link rel="stylesheet" type="text/css" href="default.css">
 </head>
 
 <body ng-controller="blwettCtrl">
-<script>
-var identg = [];
-for (i = 0; i < t.length; i++){
-	identg[i] = "#" + t[i].team1 + t[i].team2
-	   }
-</script>
-Hi $kto.username <br>
-Dein Kontostand: $kto.saldo <br>
-
+<p id="hi">Hi {{user}} </p>
+<p id="sal"> Dein Kontostand: {{saldo}}</p>
 Die nächsten Begegnungen:
 <div ng-repeat="x in begegnungen"> 
 	<h1>{{x.team1}} gg. {{x.team2}}</h1>
-	<form id={{x.team1}}{{x.team2}}>
-	<input type="number" id={{x.team1}}{{x.team2}}betrag max=40 min=0/>
-	<input type="radio" name={{x.team1}}{{x.team2}} id={{x.quote1}}1>{{x.team1}} {{x.quote1}}</input>
-	<input type="radio" name={{x.team1}}{{x.team2}} id={{x.quote0}}0>remis {{x.quote0}}</input>
-	<input type="radio" name={{x.team1}}{{x.team2}} id={{x.quote2}}2>{{x.team2}} {{x.quote2}}</input>
-	<button>setzen</button>
+	<form id={{x.matchID}}>
+	<input type="number" id={{x.matchID}}betrag max=40 min=0 />
+	<input type="radio" name={{x.matchID}} id={{x.quote1}}1>{{x.team1}} {{x.quote1}}</input>
+	<input type="radio" name={{x.matchID}} id={{x.quote0}}0>remis {{x.quote0}}</input>
+	<input type="radio" name={{x.matchID}} id={{x.quote2}}2>{{x.team2}} {{x.quote2}}</input>
 	</form>
 </div>
+<button>setzen</button>
 <br>
 <script>
+var glvaruser;
+//var glvardata;
+//var glvardata0;
+var res = {};
 $("document").ready( function (e) {
+	//e.preventDefault();
 	$("button").on('click', function (e) {
-	var res = {};
-	   for (i = 0 ; i < identg.length; i++){
-		   for (j = 1 ; j < 4; j++){
-		   	 if($(identg[i])[0][j].checked && $(identg[i])[0][0].value > 0){
-	    	    res[identg[i]] = $(identg[i])[0][j].id;
-	    	    res["Amount" + identg[i]] = $(identg[i])[0][0].value;
+	 //e.preventDefault();
+	 $('form').each(function(index, element){
+		 for (var j = 1 ; j < 4; j++){
+		   	 if(element[j].checked && element[0].value > 0){
+		   	 	res[element[j].name] = element[j].id.slice(-1);
+	    	    res["Betrag " + element[j].name] = element[0].value;
+	    	    res["Quote "] = element[j].id.slice(0, -1);
 		   		}	
-		   	  }
-			}
-			console.log(res);
-	    postBet(res);
-	   e.preventDefault();
+		}
+	res["user"] = glvaruser;	
+    });
+    console.log(res);
+    postBet(res, "https://blap-johorst.c9users.io/setzen");
 	});
 });
 </script>
-
 </body>
-
 </html>
