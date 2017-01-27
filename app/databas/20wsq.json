@@ -1,0 +1,92 @@
+﻿[
+    {
+        "team1":  "Mainz 05",
+        "team2":  "Augsburg",
+        "date":  "Friday, Feb 10 2017",
+        "time":  "19:30",
+        "matchID":  1091020,
+        "quote1":  2.20,
+        "quote0":  3.52,
+        "quote2":  3.64
+    },
+    {
+        "team1":  "Darmstadt",
+        "team2":  "Borussia Dortmund",
+        "date":  "Saturday, Feb 11 2017",
+        "time":  "14:30",
+        "matchID":  1090989,
+        "quote1":  8.00,
+        "quote0":  5.70,
+        "quote2":  1.41
+    },
+    {
+        "team1":  "Bayer Leverkusen",
+        "team2":  "Eintracht Frankfurt",
+        "date":  "Saturday, Feb 11 2017",
+        "time":  "14:30",
+        "matchID":  1091016,
+        "quote1":  1.80,
+        "quote0":  3.84,
+        "quote2":  5.15
+    },
+    {
+        "team1":  "Ingolstadt",
+        "team2":  "Bayern Munich",
+        "date":  "Saturday, Feb 11 2017",
+        "time":  "14:30",
+        "matchID":  1091024,
+        "quote1":  16.00,
+        "quote0":  7.30,
+        "quote2":  1.23
+    },
+    {
+        "team1":  "Werder Bremen",
+        "team2":  "Borussia M.Gladbach",
+        "date":  "Saturday, Feb 11 2017",
+        "time":  "14:30",
+        "matchID":  1091027,
+        "quote1":  2.91,
+        "quote0":  3.50,
+        "quote2":  2.60
+    },
+    {
+        "team1":  "RasenBallsport Leipzig",
+        "team2":  "Hamburger SV",
+        "date":  "Saturday, Feb 11 2017",
+        "time":  "14:30",
+        "matchID":  1090993,
+        "quote1":  1.51,
+        "quote0":  4.80,
+        "quote2":  7.00
+    },
+    {
+        "team1":  "Schalke 04",
+        "team2":  "Hertha Berlin",
+        "date":  "Saturday, Feb 11 2017",
+        "time":  "17:30",
+        "matchID":  1091018,
+        "quote1":  2.12,
+        "quote0":  3.40,
+        "quote2":  4.06
+    },
+    {
+        "team1":  "Wolfsburg",
+        "team2":  "Hoffenheim",
+        "date":  "Sunday, Feb 12 2017",
+        "time":  "14:30",
+        "matchID":  1091022,
+        "quote1":  2.62,
+        "quote0":  3.58,
+        "quote2":  2.85
+    },
+    {
+        "team1":  "Freiburg",
+        "team2":  "FC Cologne",
+        "date":  "Sunday, Feb 12 2017",
+        "time":  "16:30",
+        "matchID":  1090991,
+        "quote1":  2.33,
+        "quote0":  3.54,
+        "quote2":  3.34
+    }
+]

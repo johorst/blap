@@ -1,0 +1,22 @@
+HOWTO quoten Datenerstellung.
+Gegeben: MatchId bei whoscored. (z.B. 1091014)
+Aufruf in ff (wegen Cookies Robots whatever) https://www.whoscored.com/Matches/1091014/betting
+dev-console:
+var resstr = $("#ThreeWay-OrdinaryTime")[0].innerText.split(" ")[2].split("\t")
+resstr ... dann in jsfiddle.net:
+html: <div id="f"></div>
+js: 
+var ert =[ "Odds", "1.71", "4.00", "6.29", "101%" ];
+var matchID = 1091014;
+
+function dd(){
+   document.getElementById('f').innerHTML =
+   "{\"matchID\" = " + matchID + 
+   ", \"quote1\" = " + ert[1] +
+   ", \"quote0\" = " + ert[2] +
+   ", \"quote2\" = " + ert[3] +
+   "},";
+}
+
+dd();
+// ert ist resstr; Datensatz nach databas/quoten.json schreiben (1 Zeile nach "run")

@@ -1,0 +1,65 @@
+HOWTO Spieltag Datenerstellen - 
+ohne Quote jeweils nur 1 Spieltag :(
+
+1) wget (auf Konsole) 
+johorst:~/workspace/testjson (master) $ wget "http://www.openligadb.de/api/getmatchdata/bl1/2016/34" -o 34.json                                                                                                                        
+johorst:~/workspace/testjson (master) $ cp 34 ../app/
+
+2) im f12 Entwickler Browser Konsole:
+var erg = "";
+asd(nr) --- siehe get.js (20.01.2017 - holt o.g. nr - File von server; so keine XSS)
+$.each(glvardata, function(k,v){erg += '{ \"team1\" : \"' + v.Team1.TeamName.split(" ").join("") + '\" , \"team2\" : \"' + v.Team2.TeamName.split(" ").join("") + '\" , \"matchID\" : ' + v.MatchID + '},';})
+---- das der Hirnschmalz
+erg --- um es auf Konsole auszugeben
+
+3) Ausgabe erg kopieren; 
+Start ersetze: """ mit "["; 
+Ende ersetzen ","" mit "]";
+Speichere Datei als nr.json
+
+ODER II. (nur mit ff weil Cookies)
+in geeignetem fiddlerjs https://jsfiddle.net/blazeeboy/fNPvf/
+HTML: 
+<h1 id="title">Javascript example no.2</h1>
+<input type="text" id="myTextField"/>
+<input type="submit" id="byBtn" value="Change" onclick="change()"/>
+<div id="qwe">
+
+</div>
+JS:
+function change(){
+    
+   var myNewTitle = document.getElementById('myTextField').value;
+   if( myNewTitle.length==0 ){
+       alert('Write Some real Text please.');
+   return;
+   }
+   
+   var title = document.getElementById('title');
+   title.innerHTML = myNewTitle;
+   var ert = [];
+   document.getElementById('qwe').innerHTML += "[";
+   for (d = 0 ; d < wer.length; d = d + 1){
+   document.getElementById('qwe').innerHTML += "{";
+   ert[d] = {};
+   ert[d]['team1'] = wer[d][5],
+   document.getElementById('qwe').innerHTML += " \"team1\" : \"" + wer[d][5];
+   ert[d]['team2'] = wer[d][8],
+   document.getElementById('qwe').innerHTML += "\", \"team2\" : \"" + wer[d][8];
+   ert[d]['date'] = wer[d][2],
+   document.getElementById('qwe').innerHTML += "\", \"date\" : \"" + wer[d][2];
+   ert[d]['time'] = wer[d][3],
+   document.getElementById('qwe').innerHTML += "\", \"time\" : \"" + wer[d][3];
+   ert[d]['matchID'] = wer[d][0];
+   document.getElementById('qwe').innerHTML += "\", \"matchID\" : " + wer[d][0];
+   //document.getElementById('qwe').innerHTML += ert[d];
+   if(d+1 < wer.length){document.getElementById('qwe').innerHTML += "},"}
+   else document.getElementById('qwe').innerHTML += "}";
+   } 
+   //document.getElementById('qwe').innerHTML = ert;
+   document.getElementById('qwe').innerHTML += "]";
+  // alert(ert);
+}
+// url mit cookie https://www.whoscored.com/tournamentsfeed/13872/Fixtures/?d=2017W20&isAggregate=false
+
+var wer = [[1090797,4,'Saturday, May 20 2017','14:30',44,'Borussia Dortmund',0,42,'Werder Bremen',0,'vs',,0,0,,'-1',0,1,0,0] ,[1090799,4,'Saturday, May 20 2017','14:30',134,'Borussia M.Gladbach',0,1147,'Darmstadt',0,'vs',,0,0,,'-1',0,1,0,0] ,[1090801,4,'Saturday, May 20 2017','14:30',47,'Hertha Berlin',0,36,'Bayer Leverkusen',0,'vs',,0,0,,'-1',0,1,0,0] ,[1090803,4,'Saturday, May 20 2017','14:30',282,'FC Cologne',0,219,'Mainz 05',0,'vs',,0,0,,'-1',0,1,0,0] ,[1090805,4,'Saturday, May 20 2017','14:30',38,'Hamburger SV',0,33,'Wolfsburg',0,'vs',,0,0,,'-1',0,1,0,0] ,[1090807,4,'Saturday, May 20 2017','14:30',3429,'Ingolstadt',0,39,'Schalke 04',0,'vs',,0,0,,'-1',0,1,0,0] ,[1090809,4,'Saturday, May 20 2017','14:30',1211,'Hoffenheim',0,1730,'Augsburg',0,'vs',,0,0,,'-1',0,1,0,0] ,[1090811,4,'Saturday, May 20 2017','14:30',45,'Eintracht Frankfurt',0,7614,'RasenBallsport Leipzig',0,'vs',,0,0,,'-1',0,1,0,0] ,[1090814,4,'Saturday, May 20 2017','14:30',37,'Bayern Munich',0,50,'Freiburg',0,'vs',,0,0,,'-1',0,1,0,0] ];

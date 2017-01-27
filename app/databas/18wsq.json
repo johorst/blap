@@ -1,0 +1,92 @@
+﻿[
+    {
+        "team1":  "Schalke 04",
+        "team2":  "Eintracht Frankfurt",
+        "date":  "Friday, Jan 27 2017",
+        "time":  "19:30",
+        "matchID":  1090961,
+        "quote1":  1.96,
+        "quote0":  3.54,
+        "quote2":  4.60
+    },
+    {
+        "team1":  "RasenBallsport Leipzig",
+        "team2":  "Hoffenheim",
+        "date":  "Saturday, Jan 28 2017",
+        "time":  "14:30",
+        "matchID":  1090976,
+        "quote1":  1.82,
+        "quote0":  3.85,
+        "quote2":  4.95
+    },
+    {
+        "team1":  "Wolfsburg",
+        "team2":  "Augsburg",
+        "date":  "Saturday, Jan 28 2017",
+        "time":  "14:30",
+        "matchID":  1090966,
+        "quote1":  1.99,
+        "quote0":  3.60,
+        "quote2":  4.45
+    },
+    {
+        "team1":  "Ingolstadt",
+        "team2":  "Hamburger SV",
+        "date":  "Saturday, Jan 28 2017",
+        "time":  "14:30",
+        "matchID":  1090968,
+        "quote1":  2.22,
+        "quote0":  3.34,
+        "quote2":  3.86
+    },
+    {
+        "team1":  "Werder Bremen",
+        "team2":  "Bayern Munich",
+        "date":  "Saturday, Jan 28 2017",
+        "time":  "14:30",
+        "matchID":  1090970,
+        "quote1":  18.50,
+        "quote0":  7.90,
+        "quote2":  1.22
+    },
+    {
+        "team1":  "Darmstadt",
+        "team2":  "FC Cologne",
+        "date":  "Saturday, Jan 28 2017",
+        "time":  "14:30",
+        "matchID":  1090972,
+        "quote1":  3.79,
+        "quote0":  3.40,
+        "quote2":  2.23
+    },
+    {
+        "team1":  "Bayer Leverkusen",
+        "team2":  "Borussia M.Gladbach",
+        "date":  "Saturday, Jan 28 2017",
+        "time":  "17:30",
+        "matchID":  1090958,
+        "quote1":  1.88,
+        "quote0":  3.82,
+        "quote2":  4.61
+    },
+    {
+        "team1":  "Freiburg",
+        "team2":  "Hertha Berlin",
+        "date":  "Sunday, Jan 29 2017",
+        "time":  "14:30",
+        "matchID":  1090974,
+        "quote1":  2.54,
+        "quote0":  3.30,
+        "quote2":  3.17
+    },
+    {
+        "team1":  "Mainz 05",
+        "team2":  "Borussia Dortmund",
+        "date":  "Sunday, Jan 29 2017",
+        "time":  "16:30",
+        "matchID":  1090964,
+        "quote1":  5.50,
+        "quote0":  4.44,
+        "quote2":  1.67
+    }
+]
